@@ -26,6 +26,8 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
+  console.log(req);
+  console.log(JSON.stringify(req));
   // Desk secret key
   var shared = consumerSecret;
   // Grab signed request
