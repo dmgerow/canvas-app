@@ -39,7 +39,7 @@ app.post("/", function (req, res) {
   var b64Hash = CryptoJS.enc.Base64.stringify(hash);
   if (hashedContext === b64Hash) {
     // res.sendFile(path.join(views, "index.html"));
-    res.sendFile(req.body);
+    res.json(req.body);
   } else {
     res.send("authentication failed");
   }
